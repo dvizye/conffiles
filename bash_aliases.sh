@@ -24,6 +24,10 @@ alias ..='cl ..'
 
 source ~/.ros_aliases.sh
 
+# Disable touchpad 
+alias disableTouch="xinput set-prop 10 \"Device Enabled\" 0"
+alias enableTouch="xinput set-prop 10 \"Device Enabled\" 1"
+
 # xclip
 alias xclip='xclip -selection c'
 
@@ -33,6 +37,9 @@ alias celar=clear
 alias download_pdfs='wget -r -l 1 -nd -nH -A pdf '
 
 alias gopath='export GOPATH=$HOME/Projects/6.824/'
+
+alias monitor="bash ~/.screenlayout/on_top.sh"
+alias dvorak="setxkbmap dvorak"
 
 # helper functions
 upto ()
@@ -58,16 +65,6 @@ jd(){
         return 1
     else
         cd **"/$1"
-    fi
-}
-
-submitq(){
-    if [ -z "$1" ]; then
-        echo "Usage: submitq [file]";
-        return 1
-    else
-        curl -F file=@$1 -F key=UXSUK8634016L3H38RGCMZCU3RG7UUZ1 \
-            https://ydmao.scripts.mit.edu:444/6.824/handin.py/upload
     fi
 }
 

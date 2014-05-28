@@ -130,7 +130,7 @@ export WORKON_HOME=~/.virtualenvs
 export PATH=$PATH:/usr/local/go/bin
 
 #6.824 Projects
-export GOPATH=$HOME/Projects/6.824-dist-systems
+alias gopath="export GOPATH=$HOME/Projects/6.824-dist-systems"
+alias goproject="export GOPATH=/home/dzy/Projects/persistentKVStore"
+# export GOPATH=$HOME/Projects/6.824-dist-systems
 export PATH=$GOPATH/bin:$PATH
-
-
